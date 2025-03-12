@@ -8,6 +8,18 @@ body,
   height: 100%;
 }
 
+button,
+span,
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  font-family:  "寒蝉半圆体", -apple-system, BlinkMacSystemFont, "Segoe UI Adjusted",
+  "Segoe UI", "Liberation Sans", sans-serif;
+}
+
 body {
   font-family: "寒蝉半圆体", -apple-system, BlinkMacSystemFont, "Segoe UI Adjusted",
     "Segoe UI", "Liberation Sans", sans-serif !important;

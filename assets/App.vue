@@ -122,10 +122,9 @@
     </div>
     <Dialog v-model="showContextMenu">
       <div
-        style="display: flex; justify-content: center; align-items: center; padding: 10px; background: #ddd; margin: 10px; border-radius: 8px;">
-        <p style="margin: 0;">信息：</p>
+        style="display: flex; justify-content: center; align-items: center; padding:0 0 10px 0; background: #ddd; margin: 10px; border-radius: 8px;">
         <div v-text="focusedItem.key || focusedItem" class="contextmenu-filename" @click.stop.prevent
-          style="margin-left: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></div>
+          style="max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></div>
       </div>
       <ul v-if="typeof focusedItem === 'string'" class="contextmenu-list">
         <li>
