@@ -6,7 +6,12 @@
       <svg t="1741764069699" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="24280" width="24" height="24"><path d="M576 557.7088V934.4H448V560.4416l-43.8912 43.8848L313.6 513.8176l199.1232-199.1168 0.64 0.64 0.64-0.64 199.1232 199.1168-90.5088 90.5088L576 557.7088zM704 678.4h32c88.3648 0 160-71.6352 160-160s-71.6352-160-160-160c-20.5184 0-40.128 3.8592-58.1568 10.8992C670.336 270.1248 587.4944 192 486.4 192c-106.0416 0-192 85.9584-192 192 0 15.9104 1.9328 31.3728 5.5872 46.1568A127.7504 127.7504 0 0 0 256 422.4c-70.6944 0-128 57.3056-128 128s57.3056 128 128 128h64v128H256c-141.3824 0-256-114.6176-256-256 0-113.3184 73.632-209.4464 175.6608-243.136C210.0352 167.584 336.1216 64 486.4 64c121.312 0 227.552 67.712 281.7728 168.1792C912.0896 248.1792 1024 370.2208 1024 518.4c0 159.0592-128.9408 288-288 288h-32v-128z" fill="#e6e6e6" p-id="24281"></path></svg>
     </button>
     <div class="app-bar">
-      <input type="search" v-model="search" aria-label="Search" />
+      <div class="app-title-container" style="display: flex; align-items: center;" herf="/">
+        <img src="/assets/homescreen.png" alt="FlareDrive" style="height: 24px"/>
+        <h1 class="app-title" style="font-size: 20px;margin: 0 10px;">FlareDrive</h1>
+      </div>
+        
+      <input type="search" v-model="search" aria-label="Search" placeholder="🍿输入以全局搜索文件" />
       <div class="menu-button">
         <button class="circle" @click="showMenu = true" style="display: flex; align-items: center;">
           <p style="
@@ -553,7 +558,7 @@ export default {
           window.history.pushState(null, "", url.toString());
         }
         document.title = `${this.cwd.replace(/.*\/(?!$)|\//g, "") || "/"
-          } - 文件库`;
+          } - FlareDrive-R2 优雅的在线 R2 管理库`;
       },
       immediate: true,
     },
@@ -591,6 +596,12 @@ export default {
   padding: 8px;
   background-color: white;
   display: flex;
+}
+
+@media (max-width: 400px) {
+  .app-title-container {
+    display: none;
+  }
 }
 
 .menu-button {

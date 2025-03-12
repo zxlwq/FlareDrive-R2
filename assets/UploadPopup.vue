@@ -91,7 +91,7 @@ const emit = defineEmits(["update:modelValue", "upload", "createFolder"]);
 .popup button {
   border-radius: 8px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   text-align: center;
   font-size: 17px;
