@@ -108,6 +108,12 @@ input[type="search"] {
   gap: 10px;
 }
 
+@media screen and (max-width: 600px) {
+  .contextmenu-list {
+    grid-template-columns: repeat(2, 1fr);
+  } 
+}
+
 .file-attr {
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -154,11 +160,6 @@ button.circle {
 .create-folder-button {
   right: 16px;
   bottom: 80px;
-}
-
-.contextmenu-filename {
-  padding: 12px;
-  min-width: 256px;
 }
 
 .contextmenu-list > li > * {
