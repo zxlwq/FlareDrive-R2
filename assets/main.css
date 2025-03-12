@@ -9,8 +9,8 @@ body,
 }
 
 body {
-  font-family: "Zhuque Fangsong (technical preview)", -apple-system, BlinkMacSystemFont, "Segoe UI Adjusted",
-    "Segoe UI", "Liberation Sans", sans-serif;
+  font-family: "寒蝉半圆体", -apple-system, BlinkMacSystemFont, "Segoe UI Adjusted",
+    "Segoe UI", "Liberation Sans", sans-serif !important;
   font-weight: 400;
   margin: 0;
 }

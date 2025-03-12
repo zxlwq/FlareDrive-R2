@@ -22,7 +22,9 @@
           <p style="
               white-space: nowrap;
               margin: 0 10px 0 0;
-              font-size: 16px;"
+              font-size: 16px;
+              font-family: '寒蝉半圆体', -apple-system, BlinkMacSystemFont, 'Segoe UI Adjusted',
+    'Segoe UI', 'Liberation Sans', sans-serif;"
               class="menu-button-text">
             菜单
           </p>
