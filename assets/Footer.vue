@@ -37,7 +37,6 @@
         </svg></a>
     </div>
 
-    <script src="https://npm.elemecdn.com/penndu@1.0.0/bsz.js" defer=""></script>
     <div class="stats">
       阅读 <span id="busuanzi_page_pv"></span> 次 | 访客 <span id="busuanzi_page_uv"></span> 人 | 站点访问 <span
         id="busuanzi_site_pv"></span> 次 | 访客 <span id="busuanzi_site_uv"></span> 人
@@ -55,7 +54,7 @@
     <div class="powered">Powered by <a href="https://workers.cloudflare.com/" target="_blank"
         rel="noopener noreferrer">Cloudflare Workers</a></div>
 
-    <div>© 2025 FlareDrive. All rights reserved.</div>
+    <div style="margin:10px 0;">© 2025 FlareDrive. All rights reserved.</div>
   </footer>
 </template>
 
