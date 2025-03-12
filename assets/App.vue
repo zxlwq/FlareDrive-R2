@@ -3,9 +3,7 @@
     <progress v-if="uploadProgress !== null" :value="uploadProgress" max="100"></progress>
     <UploadPopup v-model="showUploadPopup" @upload="onUploadClicked" @createFolder="createFolder"></UploadPopup>
     <button class="upload-button circle" @click="showUploadPopup = true">
-      <img style="filter: invert(100%)"
-        src="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/4.0.0/png/file/upload_file/materialicons/36dp/2x/baseline_upload_file_black_36dp.png"
-        alt="Upload" width="36" height="36" @contextmenu.prevent />
+      <svg t="1741764069699" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="24280" width="24" height="24"><path d="M576 557.7088V934.4H448V560.4416l-43.8912 43.8848L313.6 513.8176l199.1232-199.1168 0.64 0.64 0.64-0.64 199.1232 199.1168-90.5088 90.5088L576 557.7088zM704 678.4h32c88.3648 0 160-71.6352 160-160s-71.6352-160-160-160c-20.5184 0-40.128 3.8592-58.1568 10.8992C670.336 270.1248 587.4944 192 486.4 192c-106.0416 0-192 85.9584-192 192 0 15.9104 1.9328 31.3728 5.5872 46.1568A127.7504 127.7504 0 0 0 256 422.4c-70.6944 0-128 57.3056-128 128s57.3056 128 128 128h64v128H256c-141.3824 0-256-114.6176-256-256 0-113.3184 73.632-209.4464 175.6608-243.136C210.0352 167.584 336.1216 64 486.4 64c121.312 0 227.552 67.712 281.7728 168.1792C912.0896 248.1792 1024 370.2208 1024 518.4c0 159.0592-128.9408 288-288 288h-32v-128z" fill="#e6e6e6" p-id="24281"></path></svg>
     </button>
     <div class="app-bar">
       <input type="search" v-model="search" aria-label="Search" />
@@ -13,7 +11,7 @@
         <button class="circle" @click="showMenu = true" style="display: flex; align-items: center;">
           <p style="
               white-space: nowrap;
-              margin-right: 10px;
+              margin: 0 10px 0 0;
               font-size: 16px;
             ">
             菜单
@@ -86,7 +84,10 @@
       <span>没有文件</span>
     </div>
     <Dialog v-model="showContextMenu">
-      <div v-text="focusedItem.key || focusedItem" class="contextmenu-filename" @click.stop.prevent></div>
+      <div style="display: flex; justify-content: center; align-items: center; padding: 10px; background: rgba(255, 255, 255, 0.8); margin: 10px; border-radius: 8px;">
+        <p style="margin: 0;">信息：</p>
+        <div v-text="focusedItem.key || focusedItem" class="contextmenu-filename" @click.stop.prevent style="margin-left: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></div>
+      </div>
       <ul v-if="typeof focusedItem === 'string'" class="contextmenu-list">
         <li>
           <button @click="copyLink(`/?p=${encodeURIComponent(focusedItem)}`)">
@@ -584,7 +585,7 @@ export default {
 }
 
 .app-bar {
-  z-index: 2px;
+  z-index: 2;
   position: sticky;
   top: 0;
   padding: 8px;
