@@ -38,5 +38,6 @@ const emit = defineEmits(["update:modelValue"]);
   background-color: white;
   border-radius: 12px;
   overflow: hidden;
+  padding: 10px;
 }
 </style>
