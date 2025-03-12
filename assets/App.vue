@@ -176,6 +176,7 @@
         </li>
       </ul>
     </Dialog>
+    <Footer />
   </div>
 </template>
 
@@ -190,6 +191,7 @@ import Dialog from "./Dialog.vue";
 import Menu from "./Menu.vue";
 import MimeIcon from "./MimeIcon.vue";
 import UploadPopup from "./UploadPopup.vue";
+import Footer from "./Footer.vue";
 
 export default {
   data: () => ({
