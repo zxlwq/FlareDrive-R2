@@ -104,7 +104,8 @@ progress {
 }
 
 button.circle {
-  border-radius: 50%;
+  border-radius: 50px;
+  padding: 0 10px;
 }
 
 .upload-button,
