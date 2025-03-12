@@ -18,7 +18,7 @@
 
       <input type="search" v-model="search" aria-label="Search" placeholder="🍿 输入以全局搜索文件" />
       <div class="menu-button">
-        <button class="circle" @click="showMenu = true" style="display: flex; align-items: center;background-color: #ddd;">
+        <button class="circle" @click="showMenu = true" style="display: flex; align-items: center;background-color: rgb(245, 245, 245);">
           <p style="
               white-space: nowrap;
               margin: 0 10px 0 0;
@@ -114,8 +114,8 @@
         </li>
       </ul>
     </div>
-    <div v-if="loading" style="margin-top: 12px; text-align: center">
-      <span>加载中...</span>
+    <div v-if="loading" style="margin: 20px 0; text-align: center">
+      <span style="font-size: 20px;">加载中...</span>
     </div>
     <div v-else-if="!filteredFiles.length && !filteredFolders.length" style="margin: 20px 0; text-align: center">
       <span style="font-size: 20px;">没有文件</span>
@@ -593,8 +593,9 @@ export default {
             : url.searchParams.delete("p");
           window.history.pushState(null, "", url.toString());
         }
-        document.title = `${this.cwd.replace(/.*\/(?!$)|\//g, "") || "/"
-          } - FlareDrive-R2 优雅的在线 R2 管理库`;
+        document.title = this.cwd === "/" 
+            ? "FlareDrive-R2 - 优雅的 Cloudflare R2 网盘文件库"
+            :`${this.cwd.replace(/.*\/(?!$)|\//g, "") || "/" } - 优雅的 Cloudflare R2 网盘文件库`;
       },
       immediate: true,
     },
@@ -689,7 +690,7 @@ export default {
 }
 
 .menu-button>button:hover {
-  background-color: whitesmoke;
+  background-color: rgb(212, 212, 212);
 }
 
 .menu {
