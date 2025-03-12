@@ -626,13 +626,6 @@ export default {
   }
 }
 
-@media (max-width: 768px) {
-  .file-list-container {
-    width: 95%;
-    padding: 10px;
-  }
-}
-
 .menu-button>button {
   transition: background-color 0.2s ease;
 }
