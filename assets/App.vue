@@ -588,7 +588,9 @@ export default {
 <style>
 .main {
   height: 100%;
-  background-image: url(/bg-light.webp);
+  background-image: url(/assets/bg-light.webp);
+  background-size: cover;
+  background-position: center;
 }
 
 .app-bar {
