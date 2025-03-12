@@ -117,8 +117,8 @@
     <div v-if="loading" style="margin-top: 12px; text-align: center">
       <span>加载中...</span>
     </div>
-    <div v-else-if="!filteredFiles.length && !filteredFolders.length" style="margin-top: 12px; text-align: center">
-      <span>没有文件</span>
+    <div v-else-if="!filteredFiles.length && !filteredFolders.length" style="margin: 20px 0; text-align: center">
+      <span style="font-size: 20px;">没有文件</span>
     </div>
     <Dialog v-model="showContextMenu">
       <div
@@ -176,6 +176,7 @@
         </li>
       </ul>
     </Dialog>
+    <div style="flex:1"></div>
     <Footer />
   </div>
 </template>
@@ -619,11 +620,13 @@ export default {
 
 <style>
 .main {
+  display: flex;
   height: 100%;
   background-image: url(/assets/bg-light.webp);
   background-size: cover;
   background-position: center;
   overflow-y: auto;
+  flex-direction: column;
 }
 
 .app-bar {
