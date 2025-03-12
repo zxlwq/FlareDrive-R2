@@ -29,16 +29,17 @@ ul {
 .file-list {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 10px;
 }
 
 .file-list > li {
-  width: 33.33%;
+  width: 100%;
+  margin:0 10px;
+  margin-bottom: 10px;
 }
 
-@media only screen and (max-width: 768px) {
-  .file-list > li {
-    width: 100%;
-  }
+.file-list > li:hover {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 a {
@@ -62,10 +63,6 @@ input[type="search"] {
   align-items: center;
   cursor: pointer;
   user-select: none;
-}
-
-.file-item:hover {
-  background-color: #f5f5f5;
 }
 
 .file-item > div {

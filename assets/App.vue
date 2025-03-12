@@ -609,14 +609,21 @@ export default {
 
 .file-list-container {
   margin: 20px auto;
-  padding: 20px;
+  padding: 10px;
   width: 60%;
   max-width: 95%;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: width 0.3s ease;
+}
+
+@media (max-width: 1280px) {
+  .file-list-container {
+    width: 768px;
+    padding: 10px;
+  }
 }
 
 @media (max-width: 768px) {
