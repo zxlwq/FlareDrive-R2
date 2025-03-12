@@ -27,11 +27,12 @@
         <li v-if="cwd !== ''">
           <div tabindex="0" class="file-item" @click="cwd = cwd.replace(/[^\/]+\/$/, '')" @contextmenu.prevent>
             <div class="file-icon">
-              <img
+              <!-- <img
                 src="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/4.0.0/png/file/folder/materialicons/36dp/2x/baseline_folder_black_36dp.png"
-                width="36" height="36" alt="Folder" />
-            </div>
-            <span class="file-name">..</span>
+                width="36" height="36" alt="Folder" /> -->
+            <i class="fa-regular fa-folder-open" style="font-size: 36px;" alt="Folder"></i>
+          </div>
+            <span class="file-name">返回上级目录</span>
           </div>
         </li>
         <li v-for="folder in filteredFolders" :key="folder">
@@ -40,9 +41,10 @@
           focusedItem = folder;
           ">
             <div class="file-icon">
-              <img
+              <!-- <img
                 src="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/4.0.0/png/file/folder/materialicons/36dp/2x/baseline_folder_black_36dp.png"
-                width="36" height="36" alt="Folder" />
+                width="36" height="36" alt="Folder" /> -->
+            <i class="fa-regular fa-folder-open" style="font-size: 36px;" alt="Folder"></i>
             </div>
             <span class="file-name" v-text="folder.match(/.*?([^/]*)\/?$/)[1]"></span>
             <div style="margin-right: 10px;margin-left: auto;" @click.stop="
@@ -78,11 +80,12 @@
                 showContextMenu = true;
               focusedItem = file;
               ">
-                <svg viewBox="0 0 24 24" style="height: 30px; width: 30px;">
+                <!-- <svg viewBox="0 0 24 24" style="height: 30px; width: 30px;">
                   <path fill="currentColor"
                     d="M10.5,12A1.5,1.5 0 0,1 12,10.5A1.5,1.5 0 0,1 13.5,12A1.5,1.5 0 0,1 12,13.5A1.5,1.5 0 0,1 10.5,12M10.5,16.5A1.5,1.5 0 0,1 12,15A1.5,1.5 0 0,1 13.5,16.5A1.5,1.5 0 0,1 12,18A1.5,1.5 0 0,1 10.5,16.5M10.5,7.5A1.5,1.5 0 0,1 12,6A1.5,1.5 0 0,1 13.5,7.5A1.5,1.5 0 0,1 12,9A1.5,1.5 0 0,1 10.5,7.5M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z">
                   </path>
-                </svg>
+                </svg> -->
+                <i class="fa-solid fa-list-ui" style="font-size: 30px;" alt="展示更多"></i>
               </div>
             </div>
           </div>
