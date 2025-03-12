@@ -587,6 +587,7 @@ export default {
   background-image: url(/assets/bg-light.webp);
   background-size: cover;
   background-position: center;
+  overflow-y: auto;
 }
 
 .app-bar {
