@@ -37,6 +37,7 @@
         </svg></a>
     </div>
 
+    <script src="https://npm.elemecdn.com/penndu@1.0.0/bsz.js" defer=""></script>
     <div class="stats">
       阅读 <span id="busuanzi_page_pv"></span> 次 | 访客 <span id="busuanzi_page_uv"></span> 人 | 站点访问 <span
         id="busuanzi_site_pv"></span> 次 | 访客 <span id="busuanzi_site_uv"></span> 人
@@ -61,12 +62,12 @@
 <script>
 export default {
   name: "Footer",
-  mounted() {
-    const script = document.createElement('script');
-    script.src = "https://npm.elemecdn.com/penndu@1.0.0/bsz.js";
-    script.defer = true;
-    document.body.appendChild(script);
-  }
+  // mounted() {
+  //   const script = document.createElement('script');
+  //   script.src = "https://npm.elemecdn.com/penndu@1.0.0/bsz.js";
+  //   script.defer = true;
+  //   document.body.appendChild(script);
+  // }
 };
 </script>
 
