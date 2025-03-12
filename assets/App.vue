@@ -11,19 +11,20 @@
       </svg>
     </button>
     <div class="app-bar">
-      <div class="app-title-container" style="display: flex; align-items: center;" herf="/">
+      <a class="app-title-container" style="display: flex; align-items: center;" herf="/">
         <img src="/assets/homescreen.png" alt="FlareDrive" style="height: 24px" />
-        <h1 class="app-title" style="font-size: 20px;margin: 0 10px;">FlareDrive</h1>
-      </div>
+        <h1 class="app-title" style="font-size: 20px;margin: 0 25px 0 8px; user-select: none;">FlareDrive</h1>
+      </a>
 
-      <input type="search" v-model="search" aria-label="Search" placeholder="🍿输入以全局搜索文件" />
+      <input type="search" v-model="search" aria-label="Search" placeholder="🍿 输入以全局搜索文件" />
       <div class="menu-button">
         <button class="circle" @click="showMenu = true" style="display: flex; align-items: center;">
           <p style="
               white-space: nowrap;
               margin: 0 10px 0 0;
               font-size: 16px;
-            ">
+              background-color: #ddd;"
+              class="menu-button-text">
             菜单
           </p>
           <svg t="1741761597964" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -632,8 +633,23 @@ export default {
 }
 
 @media (max-width: 400px) {
+  .menu-button {
+    margin: 0;
+    padding: 0;
+  }
+
+  button.circle {
+    padding: 0 8px;
+  }
+
+  .menu-button-text {
+    display: none !important;
+  }
+}
+
+@media (max-width: 340px) {
   .app-title-container {
-    display: none;
+    display: none !important;
   }
 }
 

@@ -80,6 +80,8 @@ input[type="search"] {
 
 .file-info-container {
   width: 100%;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .file-name,
@@ -96,6 +98,9 @@ input[type="search"] {
 }
 
 .file-attr {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   margin-top: 4px;
   color: dimgray;
   font-size: 0.8em;
