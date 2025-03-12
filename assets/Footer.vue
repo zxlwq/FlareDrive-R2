@@ -38,30 +38,35 @@
     </div>
 
     <div class="stats">
-      <script defer src="https://npm.elemecdn.com/penndu@1.0.0/bsz.js"></script>
       阅读 <span id="busuanzi_page_pv"></span> 次 | 访客 <span id="busuanzi_page_uv"></span> 人 | 站点访问 <span
         id="busuanzi_site_pv"></span> 次 | 访客 <span id="busuanzi_site_uv"></span> 人
     </div>
 
     <div class="project-links">
-      <strong>项目:</strong> <a href="https://github.com/willow-god/FlareDrive-R2" target="_blank"
+      <strong>项目:</strong><a href="https://github.com/willow-god/FlareDrive-R2" target="_blank"
         rel="noopener noreferrer">FlareDrive-R2</a>
-      <strong>作者:</strong> <a href="https://github.com/willow-god" target="_blank"
+      <strong>作者:</strong><a href="https://github.com/willow-god" target="_blank"
         rel="noopener noreferrer">willow-god</a>
-      <strong>原项目:</strong> <a href="https://github.com/longern/FlareDrive" target="_blank"
+      <strong>初始项目:</strong><a href="https://github.com/longern/FlareDrive" target="_blank"
         rel="noopener noreferrer">FlareDrive</a>
     </div>
 
-    <p class="powered">Powered by <a href="https://workers.cloudflare.com/" target="_blank"
-        rel="noopener noreferrer">Cloudflare Workers</a></p>
+    <div class="powered">Powered by <a href="https://workers.cloudflare.com/" target="_blank"
+        rel="noopener noreferrer">Cloudflare Workers</a></div>
 
-    <p>© 2025 FlareDrive. All rights reserved.</p>
+    <div>© 2025 FlareDrive. All rights reserved.</div>
   </footer>
 </template>
 
 <script>
 export default {
   name: "Footer",
+  mounted() {
+    const script = document.createElement('script');
+    script.src = "https://npm.elemecdn.com/penndu@1.0.0/bsz.js";
+    script.defer = true;
+    document.body.appendChild(script);
+  }
 };
 </script>
 
