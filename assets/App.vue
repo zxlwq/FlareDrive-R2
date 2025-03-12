@@ -612,6 +612,7 @@ export default {
     Menu,
     MimeIcon,
     UploadPopup,
+    Footer,
   },
 };
 </script>
