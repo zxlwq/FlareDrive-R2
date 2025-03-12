@@ -38,7 +38,7 @@
     </div>
 
     <div class="stats">
-      页面浏览：<span id="vercount_value_page_pv">114514</span>次 | 站点浏览：<span id="vercount_value_site_pv">114514</span>人 | 站点访客：<span id="vercount_value_site_uv">114514</span>人
+      访问次数：<span id="vercount_value_site_pv">😯</span>次 | 访客人数：<span id="vercount_value_site_uv">😯</span>人
     </div>
 
     <div class="project-links">
