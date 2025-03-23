@@ -619,7 +619,7 @@ export default {
 .main {
   display: flex;
   height: 100%;
-  background-image: url(https://pan.cd7c586e218922c879703e92dff91a8a.r2.cloudflarestorage.com/img/background1.webp);
+  background-image: https://pan.cd7c586e218922c879703e92dff91a8a.r2.cloudflarestorage.com/img/background1.webp
   background-size: cover;
   background-position: center;
   overflow-y: auto;
