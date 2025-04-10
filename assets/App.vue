@@ -1,5 +1,10 @@
 <template>
-  <div class="main" @dragenter.prevent @dragover.prevent @drop.prevent="onDrop">
+  <div class="main" 
+      @dragenter.prevent 
+      @dragover.prevent 
+      @drop.prevent="onDrop"
+      :style="{ backgroundImage: `url('${backgroundImageUrl}')` }"
+  >
     <progress v-if="uploadProgress !== null" :value="uploadProgress" max="100"></progress>
     <UploadPopup v-model="showUploadPopup" @upload="onUploadClicked" @createFolder="createFolder"></UploadPopup>
     <button class="upload-button circle" @click="showUploadPopup = true">
@@ -205,6 +210,7 @@ export default {
     showUploadPopup: false,
     uploadProgress: null,
     uploadQueue: [],
+    backgroundImageUrl: import.meta.env.BACKGROUND_IMAGE_URL || "/assets/bg-light.webp"
   }),
 
   computed: {
@@ -619,7 +625,7 @@ export default {
 .main {
   display: flex;
   height: 100%;
-  background-image: url(/assets/bg-light.webp);
+  /* background-image: url(/assets/bg-light.webp); */
   background-size: cover;
   background-position: center;
   overflow-y: auto;

@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+svg {
+  overflow: unset !important;
+}
+
 html,
 body,
 #app {
