@@ -210,7 +210,7 @@ export default {
     showUploadPopup: false,
     uploadProgress: null,
     uploadQueue: [],
-    backgroundImageUrl: import.meta.env.BACKGROUND_IMAGE_URL || "/assets/bg-light.webp"
+    backgroundImageUrl: process.env.BACKGROUND_IMAGE_URL || "/assets/bg-light.webp"
   }),
 
   computed: {
