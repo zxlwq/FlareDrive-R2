@@ -25,11 +25,11 @@ FlareDrive-R2 是基于 Cloudflare R2 + Workers 构建的在线网盘系统，�
 
 1. 新建存储桶（建议名称全小写）
 
-   ![QQ_1744351903148](.\docs\create-bucket.png)
+   ![QQ_1744351903148](docs/create-bucket.png)
 
 2. 创建完成后，点开设置页面，在存储桶设置中启用「公开访问」
 
-   ![QQ_1744352059947](.\docs\r2.dev.png)
+   ![QQ_1744352059947](docs/r2.dev.png)
 
 3. 复制“公共存储桶 URL”，格式如下：
 
@@ -46,7 +46,7 @@ https://pub-kdsjfhlasnwiuweia4387rfho85tnof4.r2.dev
 
 ### 3. 配置环境变量
 
-![QQ_1744352357624](.\docs\secret.png)
+![QQ_1744352357624](docs/secret.png)
 
 在 Cloudflare Pages 项目中，进入 **Settings → Environment Variables** 添加以下变量：
 
@@ -57,7 +57,7 @@ https://pub-kdsjfhlasnwiuweia4387rfho85tnof4.r2.dev
 | `GUEST`        | `public/`                                             | ❌ 可选   | 游客写入的默认目录                             |
 | `user1:123456` | `user1/,shared/`                                      | ❌ 可选   | 普通用户及其可写入目录，支持多个目录，格式一致 |
 
-<p style="color: red; font-weight: bold;">
+<p style="color: red !important; font-weight: bold;">
   ⚠️ 请勿开启 R2 存储桶的公开读写权限！否则你的存储资源可能会被恶意刷爆。
 </p>
 
