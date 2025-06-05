@@ -619,7 +619,7 @@ export default {
 .main {
   display: flex;
   height: 100%;
-  background-image: url(/assets/bg-light.webp); 
+  background-image: url(/assets/favicon.wedp); 
   background-size: cover;
   background-position: center;
   overflow-y: auto;
