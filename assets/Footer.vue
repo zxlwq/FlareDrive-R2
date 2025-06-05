@@ -28,7 +28,7 @@
         rel="noopener noreferrer">播放音乐</a>
     </div>
 
-    <div class="powered">图床<a href="https://pixpro.zxlwq.dpdns.org/" target="_blank"
+    <div class="powered">图床 <a href="https://pixpro.zxlwq.dpdns.org/" target="_blank"
         rel="noopener noreferrer">科技刘-图床</a></div>
 
     <div style="margin:10px 0;">© 2025 FlareDrive</div>
