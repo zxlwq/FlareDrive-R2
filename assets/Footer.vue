@@ -16,22 +16,22 @@
     </div>
 
     <div class="stats">
-      访问次数：<span id="vercount_value_site_pv">😯</span>次 | 访客人数：<span id="vercount_value_site_uv">😯</span>人
+      访问次数：<span id="vercount_value_site_pv">1314</span>次 | 访客人数：<span id="vercount_value_site_uv">520</span>人
     </div>
 
     <div class="project-links">
-      <strong>项目:</strong><a href="https://github.com/zxlwq/FlareDrive-R2" target="_blank"
-        rel="noopener noreferrer">FlareDrive-R2</a>
-      <strong>作者:</strong><a href="https://github.com/zxlwq" target="_blank"
-        rel="noopener noreferrer">科技-刘</a>
-      <strong>初始项目:</strong><a href="https://github.com/ljxi/Cloudflare-R2-oss" target="_blank"
-        rel="noopener noreferrer">Cloudflare-R2-OSS</a>
+      <strong>影视站:</strong><a href="https://tvc.zxlwq.dpdns.org/" target="_blank"
+        rel="noopener noreferrer">科技刘-影视</a>
+      <strong>最新热点:</strong><a href="https://news.zxlwq.dpdns.org" target="_blank"
+        rel="noopener noreferrer">各平台热门</a>
+      <strong>音乐盒:</strong><a href="https://player.lwq.hidns.vip/" target="_blank"
+        rel="noopener noreferrer">播放音乐</a>
     </div>
 
-    <div class="powered">Powered by <a href="https://workers.cloudflare.com/" target="_blank"
-        rel="noopener noreferrer">Cloudflare Workers</a></div>
+    <div class="powered">图床<a href="https://pixpro.zxlwq.dpdns.org/" target="_blank"
+        rel="noopener noreferrer">科技刘-图床</a></div>
 
-    <div style="margin:10px 0;">© 2025 FlareDrive. All rights reserved.</div>
+    <div style="margin:10px 0;">© 2025 FlareDrive</div>
   </footer>
 </template>
 
