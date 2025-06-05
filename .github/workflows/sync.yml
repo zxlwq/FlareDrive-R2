@@ -1,0 +1,37 @@
+name: Sync Upstream
+
+on:
+  schedule:
+    - cron: '0 1 * * *'  # 每天凌晨1点（UTC 时间）
+  workflow_dispatch:      # 允许手动触发
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 设置 Git 身份
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+      - name: 克隆你的仓库
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false  # 关闭默认令牌权限，使用 PAT 推送
+          fetch-depth: 0              # 获取完整历史（为了 merge）
+
+      - name: 添加上游仓库
+        run: git remote add upstream https://github.com/willow-god/FlareDrive-R2.git
+
+      - name: 获取上游内容
+        run: git fetch upstream
+
+      - name: 合并上游分支
+        run: |
+          git checkout FlareDrive-R2
+          git merge upstream/FlareDrive-R2 --allow-unrelated-histories -m "🤖 自动同步上游更新"
+
+      - name: 推送更新到你的仓库
+        uses: ad-m/github-push-action@v0.8.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
